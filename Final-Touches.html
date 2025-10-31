@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retro Pixel Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      background-color: #272744;
+      border: 4px solid #f0a500;
+      box-shadow: 
+        5px 5px 0 0 #b37600,
+        -5px -5px 0 0 #b37600;
+    }
+    h1 {
+      color: #f0a500;
+      text-shadow: 2px 2px #000000;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      color: #00f0ff;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-shadow: 1px 1px #000000;
+      transition: color 0.1s;
+    }
+    nav a:hover {
+      color: #ffff00;
+    }
+    main {
+      text-align: left;
+      padding: 20px;
+      margin: 20px;
+      background-color: #272744;
+      border: 4px solid #00f0ff;
+      box-shadow: 
+        5px 5px 0 0 #00a3ad,
+        -5px -5px 0 0 #00a3ad;
+    }
+    h2 {
+      color: #00f0ff;
+      font-size: 16px;
+      text-shadow: 1px 1px #000000;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    section {
+      border-bottom: 2px solid #00f0ff;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    article {
+      background-color: #1a1a2e;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: inset 3px 3px 0 0 #000;
+      border: 1px solid #00a3ad;
+    }
+    h3 {
+      color: #f0a500;
+      font-size: 12px;
+      text-shadow: 1px 1px #000;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    hr {
+      width: 95%;
+      margin: 20px auto;
+      border: 0;
+      border-top: 2px dashed #00a3ad; 
+      background: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      background-color: #272744;
+      border: 4px solid #f0a500;
+      box-shadow: 
+        5px 5px 0 0 #b37600,
+        -5px -5px 0 0 #b37600;
+      font-size: 8px;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    footer a {
+      color: #e0e0e0;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    footer a:hover {
+      color: #ffff00;
+    }
+    figure {
+      margin: 10px 0 15px 0;
+      padding: 0;
+    }
+    .pixel-image {
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated; 
+      image-rendering: crisp-edges;
+      border: 2px solid #00f0ff;
+    }
+    figcaption {
+      font-size: 8px;
+      color: #e0e0e0;
+      text-align: center;
+      padding-top: 5px;
+    }
+    ul, blockquote {
+        font-size: 10px; /* Readability for lists */
+    }
+
+    /* --- 💖 NEW STYLES TO MATCH THE SCREENSHOT 💖 --- */
+
+    /* We apply this class to the special article to give it the new look */
+    article.styled-card {
+        background-color: #1a1a2e; /* Dark blue background */
+        border: 4px solid #111; /* Dark outer border */
+        padding: 20px;
+        box-shadow: 0 0 0 4px #00f0ff; /* Inner glowing cyan border! */
+    }
+
+    /* The box that replaces the image */
+    .placeholder-box {
+        background-color: #1a1a2e;
+        border: 2px solid #00f0ff; /* Bright cyan border */
+        height: 150px; /* Gave it a height */
+        display: flex; /* These 3 lines center the text inside */
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px; /* Space below the box */
+    }
+    
+    /* The text inside the box */
+    .placeholder-box h2 {
+        color: #00f0ff;
+        font-size: 20px; /* Adjusted size */
+        text-shadow: 2px 2px #000;
+    }
+
+    /* The caption text below the box */
+    .styled-card .caption {
+        font-size: 8px;
+        color: #e0e0e0;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    /* Make sure paragraph text inside the card is styled correctly */
+    .styled-card p {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Retro Pixel Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Stories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section>
+      <h2>About</h2>
+      <!-- CORRECTED THIS ARTICLE -->
+      <article>
+        <figure>
+<img src="https://i.imgur.com/aDKxW0U.gif" alt="Street Fighter pixel art animation" style="width: 550px; height: 250px; object-fit: cover; object-position: center;">    <figcaption>
+        WELCOME TO MY BLOG
+    </figcaption>
+</figure>
+        <p>
+          Hello! I'm Sayuri, and this is my blog for the codédex final chapter of my html course 🌟💻. 
+          It's been a fun journey, can't wait to start more courses soon ✨. For this blog I'm gonna post 
+          about the 90'S JAPANESE PIXEL video games🕹️
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Stories</h2>
+      
+      <article>
+        <h3>💜 Neon Cyberpunk Japan</h3>
+        <figure>
+    <img src="https://i.imgur.com/JBIQaQf.gif" alt="Snatcher GIF Dump - Sega CD 1994" style="width: 550px; height: 220px; object-fit: cover; object-position: top;">
+    <figcaption>
+        Scene from the game 'Snatcher' (1994).
+    </figcaption>
+</figure>
+        <h3>⭐ What it is</h3>
+        <p>A futuristic pixel world inspired by Tokyo — filled with neon lights, technology, rain, and mystery. 
+    This style mixes <strong>90s pixel art</strong> with <strong>sci-fi cyberpunk vibes</strong>, where cities feel 
+    advanced but gritty, and tech blends into everyday life 🏙️✨.</p>
+      <h3>🎮 Famous video game examples</h3>
+<ul>
+    <li><strong>Snatcher</strong> (1994) — cyberpunk mystery by Hideo Kojima 🕵️‍♂️🟦</li>
+    <li><strong>Shadowrun</strong> (SNES) — neon, hacking, and dark city vibes 🌃💻</li>
+    <li><strong>System Shock</strong> (PC) — retro-future technology and AI 🤖⚠️</li>
+</ul>
+      </article>
+
+      <hr>
+
+      <article>
+         <h3>❤️ Pixel Fighting Games & Arcades</h3>
+        <figure>
+          <img src="https://miro.medium.com/v2/resize:fit:1280/1*lVViy4Gi3KmxFUHF41U71w.gif" alt="Samurai Shodown pixel art animation" class="pixel-image">
+          <figcaption>Iconic fighting game character sprites.</figcaption>
+        </figure>
+        <h3>⭐ What it is</h3>
+        <p>A genre where players fight one-on-one using pixel characters, often inside Japanese arcades. These games created iconic animations, combos, and competitive culture 🥋🔥.</p>
+      <h3>🎮 Famous video game examples</h3>
+<ul>
+    <li><strong>Street Fighter II</strong> — the blueprint of fighting games 🥷🔥</li>
+    <li><strong>The King of Fighters ‘94</strong> — iconic teams + pixel animation 👑⚔️</li>
+    <li><strong>Samurai Shodown</strong> — sword duels + Japanese style 🗡️🌸</li>
+</ul>
+
+  </article>
+      
+    
+      <hr>
+
+      <!-- 💖 THIS IS THE SECTION WE CHANGED 💖 -->
+      <!-- Added the class "styled-card" to apply the new style -->
+      <article class="styled-card">
+    
+        <h3>💖 Cozy Slice-of-Life Pixel Japan</h3>
+        <figure>
+  <img src="https://i.imgur.com/rI2g20D.gif" alt="Pixel art animation of a Japanese train station at night" class="pixel-image">
+  <figcaption>A peaceful night at the train station.</figcaption>
+</figure>
+        
+        <!-- Added a caption paragraph -->
+        <p class="caption">The sound chips were the heart of 90s game music.</p>
+
+        <h3>⭐ What it is</h3>
+        <p>
+            A calm pixel style inspired by daily life in Japan — ramen shops, cherry blossoms, and school days 🌸🍜🏮. Instead of action, it focuses on peace, comfort, and emotion.
+        </p>
+        <h3>🎮 Famous video game examples</h3>
+<ul>
+    <li><strong>Tokimeki Memorial</strong> (1994) — school memories and sweet moments 💕🎒</li>
+    <li><strong>Harvest Moon</strong> (SNES, 1996) — farming, seasons, cozy routines 🌾🏡</li>
+    <li><strong>Pokémon Yellow / Pocket Pikachu</strong> (1998) — cute pets, friendship, cozy adventures 🐭🌸</li>
+</ul>
+
+
+      </article>    
+    </section>
+
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="#">Archive</a></li>
+      <li><a href="#">Legal</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
