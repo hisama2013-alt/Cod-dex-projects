@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 2. The title of the restaurant -->
+    <title>Miso Kitty House 🐱</title>
+
+    <!-- Load the required pixel font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Bonus: CSS styles for our cozy, retro restaurant -->
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-photo/pixel-art-style-scene-with-adorable-pet-cat_23-2151499886.jpg?semt=ais_hybrid&w=740&q=80');
+            color: #f0f0f0; /* Soft white text */
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto; /* Center the content */
+        }
+
+        /* --- Header Styling --- */
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 4px solid #ffd580; /* Warm yellow border */
+            background-color: #434874;
+            box-shadow: 0 0 0 4px #a38548; /* Darker shadow for depth */
+            border-radius: 8px; /* Added rounded corners */
+        }
+
+        #header-img {
+            max-width: 100%; /* Make image responsive */
+            height: auto;
+            max-height: 400px;
+            margin-bottom: 20px;
+            border: 2px solid #ffd580;
+            image-rendering: pixelated; /* Keeps the pixel art sharp! */
+            border-radius: 4px; /* Added rounded corners */
+            /* Fallback for broken image */
+            onerror="this.onerror=null;this.src='https://placehold.co/400x200/434874/ffd580?text=Miso+Kitty+Banner';";
+        }
+
+        h1 {
+            color: #ffd580; /* Warm yellow */
+            font-size: 24px; /* Adjusted for better responsiveness */
+            text-shadow: 2px 2px #000;
+        }
+        
+        header nav a {
+            color: #ffbde5; /* Soft pink for links */
+            text-decoration: none;
+            margin: 0 10px; /* Adjusted margin */
+            font-size: 14px;
+            display: inline-block; /* Helps with spacing */
+            padding: 5px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            background-color: #434874;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 4px solid #ffd580; /* Soft pink border */
+            box-shadow: 0 0 0 4px #a38548; /* Darker shadow for depth */
+            border-radius: 8px; /* Added rounded corners */
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffbde5;
+            font-size: 20px;
+            margin-top: 0;
+            text-shadow: 2px 2px #000;
+        }
+
+        /* --- Menu Item Styling --- */
+        article {
+            display: flex; /* Puts image and text side-by-side */
+            flex-direction: column; /* Stack vertically on small screens */
+            align-items: center; /* Center items when stacked */
+            gap: 20px; /* Space between image and text */
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #2c2f48;
+            text-align: center; /* Center text on small screens */
+        }
+        article:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        article img {
+            width: 128px;
+            height: 128px;
+            border: 2px solid #f0f0f0;
+            image-rendering: pixelated;
+            border-radius: 4px; /* Added rounded corners */
+            flex-shrink: 0; /* Prevent image from shrinking */
+            /* Fallback for broken images */
+            onerror="this.onerror=null;this.src='https://placehold.co/128x128/434874/f0f0f0?text=Menu+Item';";
+        }
+
+        h3 {
+            color: #ffd580;
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        /* --- Form Styling --- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block; /* Puts the label on its own line */
+            margin-bottom: 8px;
+        }
+        
+        input[type="number"],
+        textarea {
+            width: 95%;
+            max-width: 100%; /* Ensure it doesn't overflow */
+            background-color: #2c2f48;
+            border: 2px solid #f0f0f0;
+            color: #f0f0f0;
+            padding: 10px;
+            font-family: 'Press Start 2P', cursive;
+            border-radius: 4px; /* Added rounded corners */
+            box-sizing: border-box; /* Fix width issues */
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2); /* Make them slightly bigger */
+        }
+
+        /* Group radio/checkbox labels for better clicking */
+        .form-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #ffd580;
+            color: #2c2f48;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 14px;
+            padding: 15px 25px;
+            border: 2px solid #a38548;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0 auto;
+            border-radius: 4px; /* Added rounded corners */
+        }
+        input[type="submit"]:hover {
+            background-color: #ffbde5;
+        }
+
+        /* --- Footer Styling --- */
+        footer {
+            text-align: center;
+            font-size: 10px;
+            padding: 20px;
+        }
+
+        /* --- Responsive Improvements --- */
+        @media (min-width: 600px) {
+            article {
+                flex-direction: row; /* Side-by-side on larger screens */
+                text-align: left; /* Align text left */
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 28px; /* Larger font on desktop */
+            }
+
+            header nav a {
+                margin: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header Section -->
+<header>
+    <!-- The new GIF is here! -->
+    <img 
+      id="header-gif" 
+      src="https://mir-s3-cdn-cf.behance.net/project_modules/source/22499b86633169.5d9f3d3b8e5e7.gif" 
+      alt="Animated pixel art of a cat ramen shop"
+      style="max-width: 300px;"> <!-- <-- THIS IS THE CHANGE! -->
+    
+    <div class="absolute bottom-0 top-0" style="width: 500px;"></div>
+
+    <h1>Welcome to Miso Kitty House 🐱✨</h1>
+    <p>A cozy Japanese-inspired restaurant filled with soft vibes, warm smiles, and playful charm. Fresh flavors, comfort dishes, and a touch of kawaii magic in every plate. Sit, relax, and let happiness purr around you 🐾🍜💕</p>
+
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#order-form">Place an Order</a>
+    </nav>
+</header>
+
+    <!-- Main Section (Menu & Order Form) -->
+    <main>
+        <!-- Menu Section -->
+        <section id="menu">
+            <h2>Our Menu</h2>
+
+            <!-- Menu Item 1 -->
+            <article>
+                <img src="https://64.media.tumblr.com/f66ffcc3403383465a4f1e9b0253f580/tumblr_px39vhpwow1v7cfovo1_540.gif" alt="Pixel art animation of a cat in a box with sushi.">
+                <div>
+                    <h3>Calico's Conveyor Sushi</h3>
+                    <p>A fresh selection of nigiri, including tuna, salmon, and shrimp, lovingly prepared by our head chef. Served on a charming conveyor belt. <em>$15.99</em></p>
+                </div>
+            </article>
+
+            <!-- Menu Item 2 -->
+            <article>
+                <img src="https://64.media.tumblr.com/b891bd596bb1687ff9f3afcfb9e4b3a8/tumblr_omgat6opjh1s2sqhuo2_r1_540.gif" alt="Pixel art animation of a cat eating ramen.">
+                <div>
+                    <h3>Tabby's Taiyaki Treat</h3>
+                    <p>A warm, fish-shaped cake filled with sweet red bean paste. Crispy on the outside, soft and delightful on the inside. A perfect sweet treat! <em>$6.50</em></p>
+                </div>
+            </article>
+
+            <!-- Menu Item 3 -->
+            <article>
+                <img src="https://i.pinimg.com/originals/e8/9d/2e/e89d2ed9c3f05a409f3091b62a388ae5.gif" alt="Pixel art animation of a cat making mochi.">
+                <div>
+                    <h3>Purr-fect Matcha Latte</h3>
+                    <p>Creamy, stone-ground matcha green tea with steamed oat milk. Topped with a sprinkle of magic and a cute cat latte art. <em>$5.00</em></p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Order Form Section -->
+        <section id="order-form">
+            <h2>Place Your Order</h2>
+            <!-- Note: The form action="#" is a placeholder. -->
+            <form action="#">
+                <div class="form-group">
+                    <label for="sushi-qty">Calico's Conveyor Sushi:</label>
+                    <input type="number" id="sushi-qty" name="sushi-qty" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="taiyaki-qty">Tabby's Taiyaki Treat:</label>
+                    <input type="number" id="taiyaki-qty" name="taiyaki-qty" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="latte-qty">Purr-fect Matcha Latte:</label>
+                    <input type="number" id="latte-qty" name="latte-qty" min="0" value="0">
+                </div>
+
+                <div class="form-group">
+                    <p>Add-ons? (+$0.50 each)</p>
+                    <label><input type="checkbox" name="addons" value="wasabi"> Extra Wasabi</label>
+                    <label><input type="checkbox" name="addons" value="ginger"> Pickled Ginger</label>
+                    <label><input type="checkbox" name="addons" value="mochi"> Mochi Topping (for latte)</label>
+                </div>
+
+                <div class="form-group">
+                    <p>Dine in or Takeout?</p>
+                    <label><input type="radio" name="dining-option" value="dine-in" checked> Dine In</label>
+                    <label><input type="radio" name="dining-option" value="takeout"> Takeout</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-requests">Any special requests for your sushi?</label>
+                    <textarea id="special-requests" name="special-requests" rows="4" placeholder="e.g., no wasabi, extra soy sauce..."></textarea>
+                </div>
+
+                <input type="submit" value="Go To Checkout">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with love by Sayuri Llanos 💖</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
+	
